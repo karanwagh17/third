@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+  
+    .wrapper {
+      width: 80%;
+      margin: 20px auto;
+    }
+    header {
+      background-color: #f4f4f4;
+      color: #ff9b9b;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #000000;
+    }
+    .accordion-content {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+
+  <h3 class="header">Section 1</h3>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae soluta optio culpa recusandae et iste blanditiis? Doloremque a magnam voluptate, ipsum debitis sit quo quod fugit nisi veniam labore dolorem.
+
+    </p>
+  </div>
+  <h3 class="header">Section 2</h3>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officiis magnam placeat amet velit. Inventore at reiciendis eum praesentium, a ipsa enim, aliquid quisquam, iusto pariatur velit nam accusamus non.</p>
+  </div>
+  <h3 class="header">Section 3</h3>
+  <div class="accordion-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda culpa autem rerum nobis, odio vero voluptatum necessitatibus. Commodi delectus vel ex architecto itaque aspernatur, iusto, veniam nulla nesciunt animi eius!</p>
+  </div>
+</div>
+
+
+
+<script>
+
+  $(function() {
+    $(".wrapper").accordion({
+      collapsible: true,
+      active: false,
+      heightStyle: "content"
+    });
+  });
+</script>
+
+</body>
+</html>
